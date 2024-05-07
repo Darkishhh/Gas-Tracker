@@ -13,4 +13,8 @@ class FuelViewModel {
     func getVehicle(_ vehicle: Vehicle) {
         self.vehicle = vehicle
     }
+    
+    init(for vehicle: Vehicle? = nil) {
+        self.vehicle = vehicle
+    }
 }

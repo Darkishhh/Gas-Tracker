@@ -46,7 +46,9 @@ extension VehicleList: UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         if let viewController = mainStoryboard.instantiateViewController(withIdentifier: "fuelList") as? FuelList {
-            viewController.viewModel.vehicle = viewModel.myVehiclesList()[indexPath.row]
+            let vehicle = viewModel.myVehiclesList()[indexPath.row]
+            let fuelViewModel = FuelViewModel(for: vehicle)
+            viewController.setupFuelViewModel(with: fuelViewModel)
             self.present(viewController, animated: true, completion: nil)
         }
     }

@@ -11,9 +11,9 @@ class VehicleViewModel {
     private var vehicles = [Vehicle]() // update it for mock data
     
     func myVehiclesList() -> [Vehicle] {
-        let kia = Vehicle(name: "Kia Sorento", image: "Kia.PNG", mileage: 171_150, id: "1", history: firstFuelPurchase())
+        let kia = Vehicle(name: "Kia Sorento", image: "sorento.PNG", mileage: 171_150, id: "1", history: firstFuelPurchase())
         let chevy = Vehicle(name: "Chevrolet Cruze", image: nil, mileage: 80_000, id: "2", history: moreFuelPurchases())
-        let porsh = Vehicle(name: "Porsche Boxster", image: "Boxster.PNG", mileage: 190_000, id: "3", history: nil)
+        let porsh = Vehicle(name: "Porsche Boxster", image: "boxster.PNG", mileage: 190_000, id: "3", history: nil)
         
         return [kia, chevy, porsh]
     }
